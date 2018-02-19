@@ -1,0 +1,12 @@
+<adapter-config name="socketService" adapter="socket" wsdlLocation="socketService.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="eis/socket/SocketAdapter"/>
+  <endpoint-activation portType="InboundRequestReply_ptt" operation="InboundRequestReply" UITransmissionPrimitive="InboundRequestReply">
+    <activation-spec className="oracle.tip.adapter.socket.SocketActivationSpec">
+      <property name="ReplyXslt" value="reply.xsl"/>
+      <property name="Xslt" value="request.xsl"/>
+      <property name="TransMode" value="XSLT"/>
+    </activation-spec>
+  </endpoint-activation>
+
+</adapter-config>
